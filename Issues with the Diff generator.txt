@@ -1,0 +1,28 @@
+Issues with my JSON diff generator:
+1. If the key is present in one JSON but the value of the key itself is null, then in difference the entry will be "valueInFirstJson: null" which is equivalent to that key is 
+	not even present in the JSON and this is a wrong interpretation.
+	Ex:
+	{"a":1}
+	{"b":2}
+	
+	Result: {"a":[{"valueInJson1":1,"valueInJson2":null}],"b":[{"valueInJson1":null,"valueInJson2":2}]}
+	
+	And
+	{"a":null}
+	{"b":1}
+	
+	Result: {"a":[{"valueInJson1":null,"valueInJson2":null}],"b":[{"valueInJson1":null,"valueInJson2":1}]}
+	here as you can see that for "a", valueInFirstJson is null thus implying that the key itself is absent in the first JSON which is essentially wrong.
+	
+2. When the value is an array it is behaving weird
+	Ex:
+	{"a":"b","c":["d"]}
+	{"a":"b","c":["d","e"]}
+	
+	Result: {"c":[{"valueInJson1":"","valueInJson2":"e"}]}
+	
+	
+	Ex:
+	[1,2,3,4]
+	[0,2,3]
+	Result: {}
