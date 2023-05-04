@@ -1,0 +1,51 @@
+{
+    "id": 1,
+    "title": "Android",
+    "description": "A Samsung phone with Android OS",
+    "price": 549,
+    "discountPercentage": 12.96,
+    "rating": 4.69,
+    "stock": 94,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+    "images": [
+      "A","B","C","D"
+    ],
+    "anotherDummyObject":{
+        "name":"Yo",
+        "zone":"Blore"
+    },
+    "values":[
+        {
+            "name":"A",
+            "class":10,
+            "age":10,
+            "address" : [
+                {
+                    "name":"A1",
+                    "city":"Chennai"
+                },
+                {
+                    "name":"A3",
+                    "city":"Kolkata"
+                }
+            ]
+        },
+        {
+            "name":"B",
+            "class":10,
+            "age":6
+        },
+        {
+            "name":"C",
+            "class":15,
+            "age":17
+        },
+        {
+            "name":"D",
+            "class":20,
+            "age":19
+        }
+    ]
+  }

@@ -1,0 +1,52 @@
+{
+    "id": 1,
+    "title": "iPhone 9",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 549,
+    "discountPercentage": 12.96,
+    "rating": 4.69,
+    "stock": 94,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+    "images": [
+      "C","D","E","F"
+    ],
+    "anotherDummyObject":{
+        "name":"YoBabloo",
+        "zone":"Hyd"
+    },
+    "values":[
+        {
+            "name":"P",
+            "class":16,
+            "age":17
+        },
+        {
+            "name":"Q",
+            "class":20,
+            "age":19
+        },
+        {
+            "name":"A",
+            "class":12,
+            "age":10,
+            "address" : [
+                {
+                    "name":"A1",
+                    "city":"Bangalore"
+                },
+                {
+                    "name":"A2",
+                    "city":"Hyderabad"
+                }
+            ]
+        },
+        {
+            "name":"B",
+            "class":10,
+            "age":6
+        }
+        
+    ]
+  }
