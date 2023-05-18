@@ -14,6 +14,8 @@ import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javax.swing.text.html.HTMLDocument.Iterator;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -121,26 +123,29 @@ public class JsonDiffGenerator {
                 && rootNode2Field.get(0).getNodeType() == JsonNodeType.STRING) ||
                 (rootNode2Field.size() == 0 && rootNode1Field.size() > 0
                         && rootNode1Field.get(0).getNodeType() == JsonNodeType.STRING)
-                ||
-                rootNode1Field.get(0).getNodeType() == JsonNodeType.STRING
-                        && rootNode2Field.get(0).getNodeType() == JsonNodeType.STRING)
+
                 ||
 
                 ((rootNode1Field.size() == 0 && rootNode2Field.size() > 0
                         && rootNode2Field.get(0).getNodeType() == JsonNodeType.NUMBER) ||
                         (rootNode2Field.size() == 0 && rootNode1Field.size() > 0
                                 && rootNode1Field.get(0).getNodeType() == JsonNodeType.NUMBER)
-                        ||
-                        rootNode1Field.get(0).getNodeType() == JsonNodeType.NUMBER
-                                && rootNode2Field.get(0).getNodeType() == JsonNodeType.NUMBER)) {
+                
+                ||
+                
+                rootNode1Field.size()>0 && rootNode2Field.size()>0 && rootNode1Field.get(0).getNodeType() == JsonNodeType.NUMBER
+                                && rootNode2Field.get(0).getNodeType() == JsonNodeType.NUMBER)
+                ||
+                rootNode1Field.size()>0 && rootNode2Field.size()>0 && rootNode1Field.get(0).getNodeType() == JsonNodeType.STRING
+                        && rootNode2Field.get(0).getNodeType() == JsonNodeType.STRING)) {
 
             // as of now do a O(n^2) check
             ObjectReader reader = new ObjectMapper().readerFor(new TypeReference<List<String>>() {
             });
             List<String> stringElementsInJson1 = reader.readValue(rootNode1Field);
             List<String> stringElementsInJson2 = reader.readValue(rootNode2Field);
-            List<String> combinedList = Stream.concat(stringElementsInJson1.stream(), stringElementsInJson2.stream())
-                    .collect(Collectors.toList());
+            Set<String> combinedList = Stream.concat(stringElementsInJson1.stream(), stringElementsInJson2.stream())
+                    .collect(Collectors.toSet());
 
             List<JsonDiffHolder> jsonDiffHolderList = new ArrayList<>();
 
@@ -155,12 +160,16 @@ public class JsonDiffGenerator {
             if (jsonDiffHolderList.size() > 0)
                 diffResult.put(key, jsonDiffHolderList);
         } else if (rootNode1Field.size() == 0 && rootNode2Field.size() > 0
-                && rootNode2Field.get(0).getNodeType() == JsonNodeType.OBJECT ||
+                && rootNode2Field.get(0).getNodeType() == JsonNodeType.OBJECT 
+                
+                ||
                 rootNode2Field.size() == 0 && rootNode1Field.size() > 0
                         && rootNode1Field.get(0).getNodeType() == JsonNodeType.OBJECT
                 ||
+                rootNode1Field.size()>0 && rootNode2Field.size()>0 && 
                 rootNode1Field.get(0).getNodeType() == JsonNodeType.OBJECT
-                        && rootNode2Field.get(0).getNodeType() == JsonNodeType.OBJECT) {
+                && rootNode2Field.get(0).getNodeType() == JsonNodeType.OBJECT) {
+
             String comparisonKey = "name"; // This key will be passed as a parameter, some way to find the exact path of
                                            // the key parameter
 
@@ -207,6 +216,54 @@ public class JsonDiffGenerator {
                 }
                 ind1++;
             }
-        }
+        }else if(rootNode1Field.size() == 0 && rootNode2Field.size() > 0
+                && rootNode2Field.get(0).getNodeType() == JsonNodeType.ARRAY 
+                
+                ||
+                rootNode2Field.size() == 0 && rootNode1Field.size() > 0
+                        && rootNode1Field.get(0).getNodeType() == JsonNodeType.ARRAY
+                ||
+                rootNode1Field.size()>0 && rootNode2Field.size()>0 && 
+                rootNode1Field.get(0).getNodeType() == JsonNodeType.ARRAY
+                && rootNode2Field.get(0).getNodeType() == JsonNodeType.ARRAY){
+                    
+                    ObjectReader reader = new ObjectMapper().readerFor(new TypeReference<List<JsonNode>>() {
+                    });
+                    List<JsonNode> rootNode1FieldContentList = reader.readValue(rootNode1Field);
+                    List<JsonNode> rootNode2FieldContentList = reader.readValue(rootNode2Field);
+
+                    List<JsonDiffHolder> jsonDiffHolderList = new ArrayList<>();
+
+                    //only in rootNode1Field
+                    for(int i=0;i<rootNode1FieldContentList.size();i++){
+                        boolean flag = false;
+                        for(int j=0; j<rootNode2FieldContentList.size();j++){
+                            if(rootNode1FieldContentList.get(i).equals(rootNode2FieldContentList.get(j))){
+                                flag = true;
+                                break;
+                            }
+                        }
+                        if(!flag){
+                            jsonDiffHolderList.add(new JsonDiffHolder(rootNode1FieldContentList.get(i), ""));
+                        }
+                    }
+
+                    //only in rootNode2Field
+                    for(int i=0;i<rootNode2FieldContentList.size();i++){
+                        boolean flag = false;
+                        for(int j=0; j<rootNode1FieldContentList.size();j++){
+                            if(rootNode2FieldContentList.get(i).equals(rootNode1FieldContentList.get(j))){
+                                flag = true;
+                                break;
+                            }
+                        }
+                        if(!flag){
+                            //need to put into diff result
+                            jsonDiffHolderList.add(new JsonDiffHolder("",rootNode2FieldContentList.get(i)));
+                        }
+                    }
+                    if (jsonDiffHolderList.size() > 0)
+                        diffResult.put(key, jsonDiffHolderList);
+                }
     }
 }

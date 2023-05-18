@@ -1,0 +1,7 @@
+[
+    {
+      "first": ["foo","sil"],
+      "second": ["foo",["bar","baz"],"sil"]
+    }
+]
+  

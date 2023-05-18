@@ -1,0 +1,8 @@
+[
+  {
+    "first": {"baz":[{"qux":"hello"}],"bar":1},
+
+    "second": {"baz":[{},"hello"],"bar":1}
+  }
+]
+  

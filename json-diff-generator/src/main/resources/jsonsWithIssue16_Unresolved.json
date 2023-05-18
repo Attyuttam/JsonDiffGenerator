@@ -1,0 +1,12 @@
+[
+    {
+        "first": {
+          "map": { "3000000000": { "field": 3100000000, "otherField": 0 } }
+        },
+        "second": {
+          "map": {
+            "3000000000": { "field": 3100000000, "otherField": 0, "extraField": 0 }
+          }
+        }
+      }
+]

@@ -27,11 +27,12 @@ public class JsonDiffGeneratorTest {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(json);
 
+        System.out.println("Total number of test cases : "+jsonNode.size());
 
         for (int i = 0; i < jsonNode.size(); i++) {
             JsonNode first = jsonNode.get(i).get("first");
             JsonNode second = jsonNode.get(i).get("second");
-            System.out.println("Comparing: ");
+            System.out.println("Comparing Jsons at index: "+i);
             System.out.println(first);
             System.out.println(second);
             TreeMap<String,List<JsonDiffHolder>> sortedDiffResult = jsonDiffGenerator.generateDiff(first, second);

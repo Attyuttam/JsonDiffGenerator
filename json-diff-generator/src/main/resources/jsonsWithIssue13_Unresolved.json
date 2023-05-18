@@ -1,0 +1,452 @@
+[
+    {
+        "first": {
+          "c_i": [
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 419,
+                  "nm": "Children"
+                },
+                {
+                  "id": 420,
+                  "nm": "General"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5796,
+                  "nm": "Fantasy"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5800,
+                  "nm": "Horror And Ghost Stories"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 419,
+                  "nm": "Children"
+                },
+                {
+                  "id": 420,
+                  "nm": "General"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5796,
+                  "nm": "Fantasy"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5800,
+                  "nm": "Horror And Ghost Stories"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 419,
+                  "nm": "Children"
+                },
+                {
+                  "id": 7991,
+                  "nm": "Children Literature"
+                },
+                {
+                  "id": 7993,
+                  "nm": "Family"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5796,
+                  "nm": "Fantasy"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5800,
+                  "nm": "Horror And Ghost Stories"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 419,
+                  "nm": "Children"
+                },
+                {
+                  "id": 7991,
+                  "nm": "Children Literature"
+                },
+                {
+                  "id": 7993,
+                  "nm": "Family"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5796,
+                  "nm": "Fantasy"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 4390,
+                  "nm": "Teens"
+                },
+                {
+                  "id": 5800,
+                  "nm": "Horror And Ghost Stories"
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "id": 1,
+                  "nm": "Books_Tree"
+                },
+                {
+                  "id": 419,
+                  "nm": "Children"
+                },
+                {
+                  "id": 7991,
+                  "nm": "Children Literature"
+                },
+                {
+                  "id": 7993,
+                  "nm": "Family"
+                }
+              ]
+            }
+          ]
+        },
+        "second": {
+          "c_i": [
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Fantasy",
+                  "id": 5796
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Horror And Ghost Stories",
+                  "id": 5800
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Children",
+                  "id": 419
+                },
+                {
+                  "nm": "Children Literature",
+                  "id": 7991
+                },
+                {
+                  "nm": "Family",
+                  "id": 7993
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Fantasy",
+                  "id": 5796
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Horror And Ghost Stories",
+                  "id": 5800
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Children",
+                  "id": 419
+                },
+                {
+                  "nm": "Children Literature",
+                  "id": 7991
+                },
+                {
+                  "nm": "Family",
+                  "id": 7993
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Children",
+                  "id": 419
+                },
+                {
+                  "nm": "General",
+                  "id": 420
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Fantasy",
+                  "id": 5796
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Horror And Ghost Stories",
+                  "id": 5800
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Children",
+                  "id": 419
+                },
+                {
+                  "nm": "General",
+                  "id": 420
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Fantasy",
+                  "id": 5796
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Teens",
+                  "id": 4390
+                },
+                {
+                  "nm": "Horror And Ghost Stories",
+                  "id": 5800
+                }
+              ]
+            },
+            {
+              "c_n_i": [
+                {
+                  "nm": "Books_Tree",
+                  "id": 1
+                },
+                {
+                  "nm": "Children",
+                  "id": 419
+                },
+                {
+                  "nm": "Children Literature",
+                  "id": 7991
+                },
+                {
+                  "nm": "Family",
+                  "id": 7993
+                }
+              ]
+            }
+          ]
+        }
+      }
+]
